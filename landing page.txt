@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 ModHub - Free Modded Games APK Downloads</title>
+    <meta name="description" content="Download free modded APKs with unlimited money, unlocked levels, and premium features. No root required!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --neon-purple: #8a2be2;
+            --neon-blue: #00bfff;
+            --dark-bg: #0f0f1a;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 900;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--neon-purple), var(--neon-blue));
+        }
+        
+        .game-card {
+            background: rgba(15, 15, 26, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.3);
+        }
+        
+        .pulse-button {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 191, 255, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 191, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 191, 255, 0);
+            }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0,  0px); }
+            50%  { transform: translate(0, 15px); }
+            100%   { transform: translate(0, -0px); }   
+        }
+        
+        .verified-badge {
+            background: linear-gradient(90deg, #00bfff, #00ffbf);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: bold;
+        }
+        
+        .download-counter {
+            position: relative;
+        }
+        
+        .download-counter::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shine 2s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Floating Emojis -->
+    <div class="fixed top-10 left-5 text-4xl floating" style="animation-delay: 0.5s;">🚀</div>
+    <div class="fixed top-1/4 right-8 text-3xl floating" style="animation-delay: 1s;">🔥</div>
+    <div class="fixed bottom-20 left-10 text-5xl floating" style="animation-delay: 1.5s;">🎮</div>
+    <div class="fixed bottom-1/3 right-5 text-4xl floating" style="animation-delay: 2s;">💎</div>
+    
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
+        <!-- Hero Section -->
+        <header class="text-center mb-10">
+            <div class="gradient-bg text-white py-2 px-4 rounded-full inline-flex items-center mb-4">
+                <span class="font-bold">🔥 TRENDING NOW</span>
+                <span class="ml-2 download-counter">⚡ 1,287,543+ DOWNLOADS!</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">🚀 UNLOCK PREMIUM FEATURES FOR FREE!</h1>
+            <p class="text-xl text-gray-300 mb-6">No root, no surveys—just instant mod APKs with unlimited money & unlocked levels!</p>
+            
+            <div class="bg-black bg-opacity-50 p-4 rounded-xl mb-6">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-green-400 font-bold">✅ VERIFIED APK</span>
+                    <span class="text-red-400 font-bold">⚠️ LINKS EXPIRE IN 24H</span>
+                </div>
+                <p class="text-yellow-300 mb-4">⚡ <span id="live-counter">542</span> people downloading now!</p>
+                <a href="#download" class="gradient-bg text-white font-bold py-4 px-8 rounded-full text-lg pulse-button inline-block">INSTALL NOW (NO VIRUS)</a>
+            </div>
+        </header>
+        
+        <!-- Search (Optional) -->
+        <div class="mb-10 relative">
+            <input type="text" placeholder="🔍 Search 500+ modded games..." class="w-full bg-gray-900 bg-opacity-50 border border-gray-700 rounded-full py-3 px-5 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+        </div>
+        
+        <!-- Trending Games -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 gradient-text">🔥 TRENDING MODS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Game Card 1 -->
+                <div class="game-card p-5">
+                    <div class="flex items-start mb-4">
+                        <img src="https://via.placeholder.com/80x80/8a2be2/00bfff?text=Roblox" alt="Roblox Mod" loading="lazy" class="w-16 h-16 rounded-xl mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg">Roblox Mod Menu</h3>
+                            <p class="text-sm text-gray-400">Latest v2.567.291</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-800 px-2 py-1 rounded">Unlimited Robux</span>
+                        <span class="text-xs bg-gray-800 px-2 py-1 rounded">God Mode</span>
+                        <span class="text-xs bg-gray-800 px-2 py-1 rounded">No Ads</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-green-400 text-sm">✅ <span class="verified-badge">Verified APK</span></span>
+                        <span class="text-gray-400 text-sm">⬇️ 287K Downloads</span>
+                    </div>
+                    <a href="#download" class="gradient-bg text-white font-bold py-3 px-6 rounded-full text-center block">FREE DOWNLOAD</a>
+                </div>
+                
+                <!-- Game Card 2 -->
+                <div class="game-card p-5">
+                    <div class="flex items-start mb-4">
+                        <img src="https://via.placeholder.com/80x80/00bfff/8a2be2?text=GTA" alt="GTA SA Mod" loading="lazy" class="w-16 h-16 rounded-xl mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg">GTA San Andreas Mod</h3>
+                            <p class="text-sm text-gray-400">Latest v2.10</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-800 px-2 py-1 rounded">Unlimited Money</span>
+                        <span class="text-xs bg-gray-800 px-2 py-1 rounded">All Weapons</span>
+                        <span class="text-xs bg-gray-800 px-2 py-1 rounded">Max Stats</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-green-400 text-sm">✅ <span class="verified-badge">Verified APK</span></span>
+                        <span class="text-gray-400 text-sm">⬇️ 198K Downloads</span>
+                    </div>
+                    <a href="#download" class="gradient-bg text-white font-bold py-3 px-6 rounded-full text-center block">FREE DOWNLOAD</a>
+                </div>
+                
+                <!-- Game Card 3 -->
+                <div class="game-card p-5">
+                    <div class="flex items-start mb-4">
+                        <img src="https://via.placeholder.com/80x80/8a2be2/00bfff?text=Minecraft" alt="Minecraft PE Mod" loading="lazy" class="w-16 h-16 rounded-xl mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg">Minecraft PE Mod</h3>
+                            <p class="text-sm text-gray-400">Latest v1.20.15</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-800 px-2 py-1 rounded">Premium Unlocked</span>
+                        <span class="text-xs bg-gray-800 px-2 py-1 rounded">Free Skins</span>
+                        <span class="text-xs bg-gray-800 px-2 py-1 rounded">No License</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-green-400 text-sm">✅ <span class="verified-badge">Verified APK</span></span>
+                        <span class="text-gray-400 text-sm">⬇️ 356K Downloads</span>
+                    </div>
+                    <a href="#download" class="gradient-bg text-white font-bold py-3 px-6 rounded-full text-center block">FREE DOWNLOAD</a>
+                </div>
+                
+                <!-- Game Card 4 -->
+                <div class="game-card p-5">
+                    <div class="flex items-start mb-4">
+                        <img src="https://via.placeholder.com/80x80/00bfff/8a2be2?text=Monopoly" alt="Monopoly Go Mod" loading="lazy" class="w-16 h-16 rounded-xl mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg">Monopoly GO! Mod</h3>
+                            <p class="text-sm text-gray-400">Latest v1.15.0</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-800 px-2 py-1 rounded">Unlimited Dice</span>
+                        <span class="text-xs bg-gray-800 px-2 py-1 rounded">Auto Win</span>
+                        <span class="text-xs bg-gray-800 px-2 py-1 rounded">Free Money</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-green-400 text-sm">✅ <span class="verified-badge">Verified APK</span></span>
+                        <span class="text-gray-400 text-sm">⬇️ 421K Downloads</span>
+                    </div>
+                    <a href="#download" class="gradient-bg text-white font-bold py-3 px-6 rounded-full text-center block">FREE DOWNLOAD</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 gradient-text">💎 WHY CHOOSE OUR MODS?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-gray-900 bg-opacity-50 p-4 rounded-xl text-center">
+                    <div class="text-4xl mb-3">🔓</div>
+                    <h3 class="font-bold mb-2">Premium Unlocked</h3>
+                    <p class="text-gray-300 text-sm">Get all paid features for free with our mods</p>
+                </div>
+                <div class="bg-gray-900 bg-opacity-50 p-4 rounded-xl text-center">
+                    <div class="text-4xl mb-3">🛡️</div>
+                    <h3 class="font-bold mb-2">Virus-Free</h3>
+                    <p class="text-gray-300 text-sm">All mods scanned and verified safe</p>
+                </div>
+                <div class="bg-gray-900 bg-opacity-50 p-4 rounded-xl text-center">
+                    <div class="text-4xl mb-3">⚡</div>
+                    <h3 class="font-bold mb-2">Fast Downloads</h3>
+                    <p class="text-gray-300 text-sm">Direct download links, no waiting</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="gradient-bg rounded-2xl p-6 text-center mb-12">
+            <h2 class="text-2xl font-bold mb-3">🚀 WHAT ARE YOU WAITING FOR?</h2>
+            <p class="mb-6">Join 1M+ gamers who unlocked premium features for free!</p>
+            <a href="#download" class="bg-black text-white font-bold py-4 px-8 rounded-full text-lg inline-block">GET MODDED APK NOW</a>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 text-sm">
+            <p class="mb-4">Unofficial mods. Not affiliated with original developers.</p>
+            <p>© 2023 ModHub. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Fake live counter animation
+        let counter = 542;
+        setInterval(() => {
+            counter += Math.floor(Math.random() * 5) + 1;
+            document.getElementById('live-counter').textContent = counter.toLocaleString();
+        }, 3000);
+        
+        // TikTok Pixel integration (example)
+        // Replace with actual TikTok Pixel code
+        function initTikTokPixel() {
+            console.log("TikTok Pixel loaded (simulated)");
+            // Actual TikTok Pixel code would go here
+        }
+        
+        // Lazy load images when they come into view
+        document.addEventListener("DOMContentLoaded", function() {
+            initTikTokPixel();
+            
+            const lazyImages = document.querySelectorAll("img[loading='lazy']");
+            
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const image = entry.target;
+                            image.src = image.dataset.src || image.src;
+                            imageObserver.unobserve(image);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(image => {
+                    imageObserver.observe(image);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
