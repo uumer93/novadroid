@@ -1,175 +1,361 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinn en husbilsresa genom Sverige</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Streaming Savings Hub | Exclusive Streaming Discounts</title>
+    <link rel="icon" type="image/x-icon" href="siteicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #6d28d9;
+            --primary-light: #8b5cf6;
+            --secondary: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        
         body {
-            font-family: 'Open Sans', sans-serif;
-            color: #333;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--dark);
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb;
         }
-        .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('driving.jpg');
-            background-size: cover;
-            background-position: center;
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 100%);
         }
-        .btn-primary {
-            background-color: #3a7d44;
+        
+        .trust-badge {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .floating-btn {
+            animation: pulse 2s infinite;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .coupon-card {
             transition: all 0.3s ease;
+            border: 1px dashed #cbd5e1;
         }
-        .btn-primary:hover {
-            background-color: #2c6135;
-            transform: translateY(-2px);
+        
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
         }
-        .benefit-card {
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        
+        .faq-item:last-child {
+            border-bottom: none;
         }
-        .how-it-works-step {
-            position: relative;
-            padding-left: 50px;
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
-        .how-it-works-step:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background-color: #e8f5e9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #3a7d44;
+        
+        .blur-effect {
+            filter: blur(4px);
+            transition: filter 0.3s ease;
         }
-        .step-1:before { content: "1"; }
-        .step-2:before { content: "2"; }
-        .step-3:before { content: "3"; }
+        
     </style>
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2112458892606062');
-    fbq('track', 'PageView');
+    <script type="text/javascript">
+        var tbhVt_DSK_tkBoIc={"it":4494752,"key":"20432"};
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2112458892606062&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+    <script src="https://d2yc6hxtq0phup.cloudfront.net/663f12e.js"></script>
 </head>
-<body class="bg-gray-50">
-    <!-- Hero Section -->
-    <section class="hero min-h-[70vh] flex items-center justify-center text-white py-16 px-4">
+<body>
+    <!-- Floating CTA Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button  onclick="_Ns()" class="floating-btn bg-gradient-to-r from-purple-600 to-purple-500 text-white font-bold py-4 px-6 rounded-full flex items-center justify-center">
+            <span>Get My Deals Now</span> <span class="ml-2">🔒</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="hero-gradient text-white py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-3xl md:text-5xl font-bold mb-6">Vinn en oförglömlig husbilsresa genom Sverige!</h1>
-            <p class="text-xl md:text-2xl mb-8">Delta idag och få chansen att uppleva friheten på vägarna – 100% gratis!</p>
-            <a href="https://tmstrack.com/?a=271410&c=408067" class="btn-primary inline-block text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl shadow-lg">
-                Fortsätt 100% Gratis ➤
-            </a>
+            <div class="flex justify-center mb-4">
+                <div class="bg-white bg-opacity-20 rounded-full p-2">
+                    <i class="fas fa-film text-2xl"></i>
+                </div>
+            </div>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4">Unlock Exclusive Streaming Discounts <span class="inline-block">🎬💸</span></h1>
+            <p class="text-xl sm:text-2xl mb-8 opacity-90">Get instant coupon codes & deals for Netflix, Disney+, Hulu & more — no tricks, no catch!</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <div class="trust-badge bg-white bg-opacity-20 rounded-full px-4 py-2 flex items-center">
+                    <i class="fas fa-lock mr-2"></i> <span>Secure Access</span>
+                </div>
+                <div class="trust-badge bg-white bg-opacity-20 rounded-full px-4 py-2 flex items-center">
+                    <i class="fas fa-shield-alt mr-2"></i>  <span>Verified by AdBlueMedia</span>
+                </div>
+                <div class="trust-badge bg-white bg-opacity-20 rounded-full px-4 py-2 flex items-center">
+                    <i class="fas fa-users mr-2"></i> <span>100K+ Streamers Served</span>
+                </div>
+            </div>
+            
+            <button onclick="_Ns()" class="inline-block bg-amber-400 hover:bg-amber-500 text-purple-900 font-bold py-4 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">
+                Get My Deals Now 🔒
+            </button>
         </div>
-    </section>
+    </header>
 
-    <!-- Benefits Section -->
-    <section class="py-16 px-4 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Varför delta?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="benefit-card bg-white p-8 text-center">
-                <div class="text-5xl mb-4">🛏️</div>
-                <h3 class="text-xl font-bold mb-3">Bo i en modern husbil</h3>
-                <p class="text-gray-600">Upplev komforten i en fullt utrustad husbil med allt du behöver för din resa.</p>
-            </div>
-            <div class="benefit-card bg-white p-8 text-center">
-                <div class="text-5xl mb-4">🗺️</div>
-                <h3 class="text-xl font-bold mb-3">Utforska Sveriges vackraste platser</h3>
-                <p class="text-gray-600">Res på dina villkor och upptäck Sveriges fantastiska natur och städer.</p>
-            </div>
-            <div class="benefit-card bg-white p-8 text-center">
-                <div class="text-5xl mb-4">🎁</div>
-                <h3 class="text-xl font-bold mb-3">Deltagandet är helt gratis!</h3>
-                <p class="text-gray-600">Inga dolda avgifter - du har inget att förlora men allt att vinna!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="py-16 px-4 bg-gray-100">
+    <!-- How It Works Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Så här deltar du</h2>
-            <div class="space-y-8">
-                <div class="how-it-works-step step-1">
-                    <h3 class="text-xl font-bold mb-2">Klicka på knappen</h3>
-                    <p class="text-gray-600">Börja med att klicka på "Fortsätt 100% Gratis"-knappen ovan.</p>
+            <h2 class="text-3xl font-bold text-center mb-12">How It Works <span class="text-purple-600">✨</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-mouse-pointer text-purple-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">1. Click 'Get My Deals'</h3>
+                    <p class="text-gray-600">Start by clicking our big purple button - no signup required yet!</p>
                 </div>
-                <div class="how-it-works-step step-2">
-                    <h3 class="text-xl font-bold mb-2">Fyll i din e-postadress</h3>
-                    <p class="text-gray-600">Ange din e-postadress på nästa sida för att registrera ditt deltagande.</p>
+                
+                <div class="text-center">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tasks text-purple-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">2. Complete a Quick Offer</h3>
+                    <p class="text-gray-600">Help our partners by completing a simple, free offer (usually under 30 seconds).</p>
                 </div>
-                <div class="how-it-works-step step-3">
-                    <h3 class="text-xl font-bold mb-2">Du är med i utlottningen!</h3>
-                    <p class="text-gray-600">Det är allt! Du kommer nu att vara med i tävlingen om den fantastiska husbilsresan.</p>
+                
+                <div class="text-center">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-ticket-alt text-purple-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">3. Reveal Coupons & Save</h3>
+                    <p class="text-gray-600">Instant access to exclusive discounts for all major streaming platforms.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Urgency Section -->
-    <section class="py-16 px-4 bg-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">Skynda dig!</h2>
-            <p class="text-xl mb-8 text-gray-600">Begränsad tid kvar att delta i tävlingen.</p>
-            <div class="bg-gray-200 rounded-full h-4 mb-8 max-w-2xl mx-auto">
-                <div class="bg-green-600 h-4 rounded-full" style="width: 30%"></div>
-            </div>
-            <a href="https://tmstrack.com/?a=271410&c=408067" class="btn-primary inline-block text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl shadow-lg">
-                Fortsätt 100% Gratis ➤
-            </a>
-        </div>
-    </section>
-
-    <!-- Contest Details -->
-    <section class="py-16 px-4 bg-gray-50">
+    <!-- Why Trust Us Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div class="max-w-4xl mx-auto">
-            <div class="bg-white p-8 rounded-lg shadow-sm">
-                <h2 class="text-2xl font-bold mb-4 text-gray-800">Om tävlingen</h2>
-                <p class="mb-4 text-gray-600">Tävlingen börjar 1:a januari och slutar 31:a december. Promotorn är xlWin Marketing. En vinnare utses varje tävlingsperiod.</p>
-                <p class="mb-4 text-gray-600">Du måste vara bosatt i Sverige och över 18 år för att delta. Priset delas ut i form av ett presentkort från gogift.io som kan användas i hundratals butiker i hela Sverige.</p>
-                <p class="text-gray-600">Prisutdelningsgaranti – alla vinster levereras snabbt och enkelt som presentkort via e-post.</p>
+            <h2 class="text-3xl font-bold text-center mb-12">Why Trust Us? <span class="text-purple-600">🔍</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-2 rounded-lg mr-4">
+                            <i class="fas fa-shield-alt text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Verified Offers</h3>
+                    </div>
+                    <p class="text-gray-600">All deals are personally verified by our team at AdBlueMedia to ensure they're legitimate and up-to-date.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-2 rounded-lg mr-4">
+                            <i class="fas fa-user-friends text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">100K+ Streamers Served</h3>
+                    </div>
+                    <p class="text-gray-600">Join our community of happy streamers who've saved millions on their subscriptions.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-2 rounded-lg mr-4">
+                            <i class="fas fa-bolt text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">No Spam, Instant Access</h3>
+                    </div>
+                    <p class="text-gray-600">We hate spam as much as you do. Get your codes immediately with no email signup required.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white p-6 rounded-xl shadow-sm">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/4 flex justify-center mb-4 md:mb-0">
+                        <img src="partner.png" width="140px" alt="AdBlueMedia" class="h-12">
+                    </div>
+                    <div class="md:w-3/4">
+                        <p class="text-gray-600">"As a trusted partner in the digital rewards space, AdBlueMedia verifies all offers on Streaming Savings Hub to ensure you get real value. Our team works 24/7 to maintain the highest quality standards."</p>
+                        <p class="mt-2 font-semibold">- The AdBlueMedia Team</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="py-16 px-4 bg-green-700 text-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">Är du redo för äventyret?</h2>
-            <p class="text-xl mb-8">Klicka på knappen nedan för att delta i tävlingen – det tar bara några sekunder!</p>
-            <a href="https://tmstrack.com/?a=271410&c=408067" class="inline-block bg-white text-green-700 font-bold py-4 px-8 rounded-full text-lg md:text-xl shadow-lg hover:bg-gray-100 transition">
-                Fortsätt 100% Gratis ➤
-            </a>
+    <!-- Featured Coupons Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Coupons <span class="text-purple-600">🎟️</span></h2>
+            <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">These are just a sample of the deals you could unlock. Complete the offer to reveal all available discounts!</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="coupon-card bg-gray-50 rounded-lg p-6 text-center">
+                    <div class="blur-effect mb-4">
+                        <img src="netflix.webp" alt="Netflix" class="mx-auto h-12">
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Netflix Premium</h3>
+                    <p class="text-gray-600 mb-4">30% off first 3 months</p>
+                    <div class="blur-effect">
+                        <div class="bg-purple-100 text-purple-800 font-mono py-2 px-4 rounded inline-block">CODE: PLEASE-UNLOCK</div>
+                    </div>
+                </div>
+                
+                <div class="coupon-card bg-gray-50 rounded-lg p-6 text-center">
+                    <div class="blur-effect mb-4">
+                        <img src="disney.png" alt="Disney+" class="mx-auto h-12">
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Disney+ Bundle</h3>
+                    <p class="text-gray-600 mb-4">2 months free + 15% off</p>
+                    <div class="blur-effect">
+                        <div class="bg-purple-100 text-purple-800 font-mono py-2 px-4 rounded inline-block">CODE: PLEASE-UNLOCK</div>
+                    </div>
+                </div>
+                
+                <div class="coupon-card bg-gray-50 rounded-lg p-6 text-center">
+                    <div class="blur-effect mb-4">
+                        <img src="prime.png" alt="Prime Video" class="mx-auto h-12">
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Prime Video</h3>
+                    <p class="text-gray-600 mb-4">50% off first month</p>
+                    <div class="blur-effect">
+                        <div class="bg-purple-100 text-purple-800 font-mono py-2 px-4 rounded inline-block">CODE: PLEASE-UNLOCK</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button onclick="_Ns()" class="inline-block bg-gradient-to-r from-purple-600 to-purple-500 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">
+                    Unlock All Deals Now 🔓
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50" id="faq">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions <span class="text-purple-600">❓</span></h2>
+            
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                <div class="faq-item p-6">
+                    <div class="flex justify-between items-center cursor-pointer">
+                        <h3 class="font-semibold text-lg">Do I need to pay for these coupons?</h3>
+                        <i class="fas fa-chevron-down text-purple-600"></i>
+                    </div>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p>No! All our coupons are completely free to access. You just need to complete a quick, free offer from one of our partners to unlock them.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item p-6">
+                    <div class="flex justify-between items-center cursor-pointer">
+                        <h3 class="font-semibold text-lg">How fast do I get the coupon codes?</h3>
+                        <i class="fas fa-chevron-down text-purple-600"></i>
+                    </div>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p>Immediately! As soon as you complete the offer, you'll get instant access to all available coupon codes with no waiting period.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item p-6">
+                    <div class="flex justify-between items-center cursor-pointer">
+                        <h3 class="font-semibold text-lg">What kind of offers do I need to complete?</h3>
+                        <i class="fas fa-chevron-down text-purple-600"></i>
+                    </div>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p>Offers vary but typically include things like signing up for a free trial, answering a quick survey, or verifying your email. All offers are free and can be completed in under a minute.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item p-6">
+                    <div class="flex justify-between items-center cursor-pointer">
+                        <h3 class="font-semibold text-lg">Are these coupons region-specific?</h3>
+                        <i class="fas fa-chevron-down text-purple-600"></i>
+                    </div>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p>Most coupons work in the US, Canada, UK, and Australia. We clearly label any regional restrictions before you complete the offer.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item p-6">
+                    <div class="flex justify-between items-center cursor-pointer">
+                        <h3 class="font-semibold text-lg">How often are new coupons added?</h3>
+                        <i class="fas fa-chevron-down text-purple-600"></i>
+                    </div>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p>We update our coupon database daily with new offers. Many streamers check back monthly to find fresh discounts for their subscriptions.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-4 bg-gray-800 text-gray-300 text-sm">
-        <div class="max-w-4xl mx-auto text-center">
-            <p>Denna kampanj är inte på något sätt sponsrad, stödd eller administrerad av eller associerad med Facebook. Genom att klicka på knappen accepterar du att bli omdirigerad till erbjudandesidan.</p>
-            <p class="mt-4">© 2025 Alla rättigheter förbehållna</p>
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 bg-gray-900 text-gray-400">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-film text-purple-400 mr-2"></i>
+                        <span class="font-bold text-white">Streaming Savings Hub</span>
+                    </div>
+                    <p class="text-sm mt-1">Your gateway to exclusive streaming discounts</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="https://www.facebook.com/profile.php?id=61576171115298" class="hover:text-white transition"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/_streamsmarter/" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-6 pt-6 text-sm flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                </div>
+                <div>
+                    <p>© Since 2023 Streaming Savings Hub. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const question = item.querySelector('div:first-child');
+            const answer = item.querySelector('div:last-child');
+            const icon = item.querySelector('i');
+            
+            question.addEventListener('click', () => {
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+    </script>
 </body>
 </html>
